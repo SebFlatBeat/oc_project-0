@@ -47,13 +47,20 @@ public class Product {
         this.details = details;
     }
 
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+    public int getQuantity() {
+        return quantity;
+    }
+    /**
+     * Set quantity to be never a negative number
+     * @param quantity
+     */
+    public void setQuantity(int quantity) {
+        if (quantity > 0) {
+            this.quantity = 0;
+        } else {
+            this.quantity = quantity;
+        }
+    }
 
     public double getPrice() {
         return price;
