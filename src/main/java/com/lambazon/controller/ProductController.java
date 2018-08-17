@@ -29,11 +29,12 @@ public class ProductController {
 		model.addAttribute("prod", productService.product(id));
 		return "product";
 	}
-	
+
+	/**
+	 * Calculate total of the amount from stock
+	 * @return totalInventoryAmount
+	 */
 	private double calculateTotalInventoryAmount() {
-		// TODO Auto-generated method stub
-		// return 123456.78;
-		
 		double totalInventoryAmount = 0.0;
 		for (Product p : productService.products()) {
 			totalInventoryAmount+=p.getInventoryPrice();
