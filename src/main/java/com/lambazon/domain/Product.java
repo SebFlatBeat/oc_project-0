@@ -66,8 +66,18 @@ public class Product {
         return price;
     }
 
+    /**
+     * Set price to be never a negative number and never be above 1000
+     * @param price
+     */
     public void setPrice(double price) {
-        this.price = price;
+        if (price < 0) {
+            this.price = 0;
+        } else if (price > 1000) {
+            this.price = 1000;
+        } else {
+            this.price = price;
+        }
     }
 
     /**
