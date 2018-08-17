@@ -52,10 +52,10 @@ public class Product {
     }
     /**
      * Set quantity to be never a negative number
-     * @param quantity
+     * @param quantity value
      */
     public void setQuantity(int quantity) {
-        if (quantity > 0) {
+        if (quantity < 0) {
             this.quantity = 0;
         } else {
             this.quantity = quantity;
@@ -68,7 +68,7 @@ public class Product {
 
     /**
      * Set price to be never a negative number and never be above 1000
-     * @param price
+     * @param price value
      */
     public void setPrice(double price) {
         if (price < 0) {
@@ -81,7 +81,7 @@ public class Product {
     }
 
     /**
-     * lets you know the total amount of the product stock
+     * let you know the total amount of the product stock
      *
      * @return price * quantity
      */
